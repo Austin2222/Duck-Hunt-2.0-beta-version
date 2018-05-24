@@ -122,13 +122,15 @@ namespace Duck_Hunt_2._0
             {
                canvas.Children.Remove(duck);
                isDuck = false;
-                
+               DucksKilled += 1;
             }
             else
             {
                 shots += 1;
                 MessageBox.Show(shots.ToString());
             }
+            
+            Points = DucksKilled * 100;
         }
 
         public void RandomChangeDirection()
